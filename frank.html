@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ frank.com
+ <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+ <script>
+//     function jsonp(url,fn){
+//         var functionName = 'frank' + parseInt(Math.random()*10000,10);
+//         window[functionName] = fn;
+//         var script = document.createElement('script');
+//         script.src = url + '?callback=' + functionName;
+//         document.head.appendChild(script)
+//     }
+//     jsonp('http://qq.com/xxx.js',function(data){
+//         console.log('第一次');
+//         console.log(data)
+//     });
+//     jsonp('http://qq.com/xxx.js',function(data){
+//         console.log('第二次');
+//         console.log(data)
+//     });
+     $.ajax({
+         url:'http://qq.com/xxx.js',
+         dataType:'jsonp',
+         success:function(data){
+             console.log('第一次');
+             console.log(data)
+         }
+     })
+
+
+ </script>
+
+</body>
+</html>
